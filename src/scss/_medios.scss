@@ -20,6 +20,14 @@
         height: 8vw;
     } */
 
+    .figure-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card{
+        width: 30vw;
+    }
+
 }
 
 @media(max-width: 767px){
@@ -72,6 +80,14 @@
     .btn{
         width: 45%;
         height: 8vw;
+    }
+
+    .figure-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card{
+        width: 90vw;
     }
 
 }

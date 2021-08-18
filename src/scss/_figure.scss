@@ -1,0 +1,53 @@
+
+.figure-item{
+    background-color: white;
+    justify-content: center;
+    border-radius: 5px;
+    height: 35vh;
+    padding: 10px;
+}
+
+.figure-container{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.figure-title{
+    padding-top: 5px;
+
+    &.delete{
+        margin-top: -15px;
+        float: right;
+    }
+}
+
+.figure-content{
+    width: 100%;
+    margin: 4px;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.quadrate{
+    margin: 2px; 
+    background-color: #C2C2C2;
+    height: 5vh;
+    border-radius: 5px;
+    &.active{
+        background-color: #6ECBDB;
+        border: solid 2px #39B36C;
+    }
+}
+
+
+
+.card{
+    margin: 10px;
+    justify-content: center;
+    width: 23vw;
+    border: solid 1px black;
+}

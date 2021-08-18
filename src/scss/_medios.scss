@@ -1,0 +1,77 @@
+//Pantallas 
+
+@media(max-width: 991px){
+    /* .nav-menu{
+        background-color: white;
+        width: 15rem;
+        height: 100vh;
+    }
+
+    .navbar{
+        &.active{
+            margin-left: 15rem;
+            transition: 480ms;
+        }
+    
+    }
+
+    .btn{
+        width: 45%;
+        height: 8vw;
+    } */
+
+}
+
+@media(max-width: 767px){
+    .nav-menu{
+        background-color: white;
+        width: 15rem;
+        height: 100vh;
+    }
+
+    .navbar{
+        &.active{
+            margin-left: 15rem;
+            transition: 480ms;
+        }
+    
+    }
+
+    .menu-bars{
+        margin-left: 1rem;
+        font-size: 18px;
+        margin-right: 1.5rem;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    .btn{
+        width: 45%;
+        height: 8vw;
+    }
+
+}
+
+@media(max-width: 575px){
+    .nav-menu{
+        background-color: white;
+        width: 10rem;
+        height: 100vh;
+    }
+
+    .navbar{
+        &.active{
+            margin-left: 10rem;
+            transition: 480ms;
+        }
+    
+    }
+
+    .btn{
+        width: 45%;
+        height: 8vw;
+    }
+
+}

@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 
-import '../scss/login.scss';
+
+//import '../scss/login.scss';
 
 function Login() {
 
@@ -38,7 +39,7 @@ function Login() {
                     <div className="row">
                         <input type="text" placeholder="Username" className="input" onChange={getUser} value={usernameValue} />
                         <input type="password" placeholder="Password" className="input" onChange={getPassword} value={passwordValue} />
-                        <button className="button submit" onClick={login}>Login</button>
+                        <button className=" btn btn-login submit" onClick={login}>Login</button>
                     </div>
                 </div>
             </div>

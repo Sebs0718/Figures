@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    max-width: 100%;
+    font-family: sans-serif;
+}
+
+img{
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.btn{
+    border: solid 1.5px;
+    cursor: pointer;
+    height: 4vw;
+}

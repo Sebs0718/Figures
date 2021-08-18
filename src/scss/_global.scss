@@ -27,3 +27,14 @@ ul{
 a{
     cursor: pointer;
 }
+
+.navbar-container{
+
+    margin-left: 2rem;
+    transition:170ms;
+
+    &.active{
+        margin-left: 21rem;
+        transition: 480ms;
+    }
+}

@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import * as FaIcons from 'react-icons/fa';
 import * as RiIcons from 'react-icons/ri';
 import { Link } from 'react-router-dom';
@@ -10,9 +11,10 @@ import logo from '../assets/img/logo.png';
 
 function Menu(){
 
-    const [sidebar, setSidebar] = useState(false);
+    const sidebar = useSelector(state => state);
+    const dispatch = useDispatch();
 
-    const showSidebar = ()=> setSidebar(!sidebar);
+    const showSidebar = ()=> dispatch({type: "change"});
 
     const Logout = ()=> localStorage.removeItem('token')
 

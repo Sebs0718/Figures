@@ -25,8 +25,10 @@ function Login() {
             const obj = {username: usernameValue, password: passwordValue};
             const { data } = await axios.post("https://java.bocetos.co/userred-0.0.1-SNAPSHOT/auth", obj);
             localStorage.setItem('token', data.Authorization)
+            localStorage.setItem('uId', data.uId)
             history.push('/Dashboard');
         } catch (error) {
+            alert('Incorrect User or Password')
             console.error(error)
         }
     }

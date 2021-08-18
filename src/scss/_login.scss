@@ -23,6 +23,11 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+    &.modal{
+        align-items: initial;
+        min-height: 0;
+    }
 }
 
 .input{

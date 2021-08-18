@@ -1,32 +1,24 @@
 //Pantallas 
 
 @media(max-width: 991px){
-    /* .nav-menu{
-        background-color: white;
-        width: 15rem;
-        height: 100vh;
-    }
-
-    .navbar{
-        &.active{
-            margin-left: 15rem;
-            transition: 480ms;
-        }
-    
-    }
-
-    .btn{
-        width: 45%;
-        height: 8vw;
-    } */
-
     .figure-container{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .card{
         width: 30vw;
+
+        &.xl{
+            width: 85vw;
+            margin-left: 0;
+        }
+
     }
+
+    .card-new{
+        width: 70vw;
+    }
+
 
 }
 
@@ -65,13 +57,13 @@
 @media(max-width: 575px){
     .nav-menu{
         background-color: white;
-        width: 10rem;
+        width: 15rem;
         height: 100vh;
     }
 
     .navbar{
         &.active{
-            margin-left: 10rem;
+            margin-left: 15rem;
             transition: 480ms;
         }
     
@@ -87,7 +79,32 @@
     }
 
     .card{
-        width: 90vw;
+        width: 85vw;
+
+        &.md{
+            width: 50vw;
+            padding: 15px;
+            display: flex;
+            height: 30vh;
+        }
+
+        &.xl{
+            width: 85vw;
+            margin-left: 0;
+        }
     }
 
+    .card-new{
+        width: 80vw;
+    }
+
+    .row-target{
+        margin-left: -5%;
+
+        &.sm{
+            margin-left: -10%;
+            width: 110vw;
+            font-size: 60px;
+        }
+    }
 }

@@ -4,6 +4,9 @@ import Dashboard from '../pages/Dashboard';
 import Login from '../pages/Login';
 import Figures from '../pages/Figures';
 import '../scss/main.scss';
+import AddFigure from '../pages/AddFigure';
+import AddGroup from '../pages/AddGroup';
+import Perfil from '../pages/Perfil';
 
 function Routes() {
     return(
@@ -17,6 +20,15 @@ function Routes() {
                 }} />
                 <Route exact path='/Figures' render={()=>{
                     return !localStorage.token ? <Redirect to='/' /> : <Figures />
+                }} />
+                <Route exact path='/AddFigures' render={()=>{
+                    return !localStorage.token ? <Redirect to='/' /> : <AddFigure />
+                }} />
+                <Route exact path='/AddGroup' render={()=>{
+                    return !localStorage.token ? <Redirect to='/' /> : <AddGroup />
+                }} />
+                <Route exact path='/Perfil' render={()=>{
+                    return !localStorage.token ? <Redirect to='/' /> : <Perfil />
                 }} />
             </Switch>
         </BrowserRouter>

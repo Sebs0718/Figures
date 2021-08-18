@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 import Menu from '../components/Menu';
 import axios from 'axios';
 import * as IoIcons from 'react-icons/io';
+import * as AiIcons from 'react-icons/ai';
 import Figure from '../components/Figure';
+import {Link} from 'react-router-dom';
 
 
 axios.interceptors.request.use(
@@ -83,19 +85,18 @@ function Figures(){
                     <a className={pags.pag2 ? "pag selected" : "pag"} onClick={changePag} value="2">Grupo de Modalidades</a>
                 </div>
                 <div className={pags.pag1 ? "row-target" : "row-target disable"}>
-                    <button className="btn btn-add"><IoIcons.IoMdAdd /></button>
+                    <button className="btn btn-add"><Link to="/AddFigures"><IoIcons.IoMdAdd /></Link></button>
                     <div className={sidebar ? "figure-container active" : "figure-container"}>
                         {geometry.map((item, index)=>{
-                            console.log(item)
                             return(
-                                <Figure id={item.id} name={item.name} positions={item.positionsWinner} />
+                                <Figure idGroup={item.groupFigureId.id} id={item.id} name={item.name} positions={item.positionsWinner} />
                             );
                         })}
                     </div>
                 </div>
                 <div className={pags.pag2 ? "row-target" : "row-target disable"}>
                     <div className="modalidades-container">
-                        <button className="btn btn-add"><IoIcons.IoMdAdd /></button>
+                        <button className="btn btn-add"><Link to="/AddGroup"><IoIcons.IoMdAdd /></Link></button>
                         <table>
                             <thead>
                                 <tr>
@@ -113,8 +114,8 @@ function Figures(){
                                             <td>{item.opportunity}</td>
                                             <td>{item.closeAt}</td>
                                             <td>
-                                                <button className='btn'>eliminar</button>
-                                                <button className='btn'>Editar</button>
+                                                <button className='btn btn-add'><AiIcons.AiFillEdit /></button>
+                                                <button className='btn btn-add'><AiIcons.AiFillDelete /></button>
                                             </td>
                                         </tr>
                                     );

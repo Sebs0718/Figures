@@ -48,6 +48,9 @@
         background-color: #6ECBDB;
         border: solid 2px #39B36C;
     }
+    &.new{
+        height: 10vh;
+    }
 }
 
 
@@ -57,6 +60,17 @@
     justify-content: center;
     width: 19vw;
     border: solid 1px black;
+
+    &.md{
+        width: 25vw;
+        padding: 15px;
+        display: flex;
+        height: 20vh;
+    }
+    &.xl{
+        width: 85%;
+        height: 80vh;
+    }
 }
 
 .btn-add {
@@ -75,6 +89,16 @@
         border-color:rgba(39, 60, 241, 0.315);
     }
 
+    &.save{
+        width: 50px;
+        font-size: 30px;
+        height: 50px;
+
+        &.disable{
+            display: none;
+        }
+    }
+
 }
 
 .row-target{
@@ -86,6 +110,10 @@
         display: none;
         width: 0;
         height: 0;
+    }
+
+    &.sm{
+        padding: 50px;
     }
 
 }
@@ -103,4 +131,19 @@
     &.selected{
         border-bottom: solid 2.5px blue;
     }
+}
+
+
+.card-new{
+    @extend .card;
+
+    width: 70vw;
+    height: 70vh;
+}
+
+.btn-change{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-color: transparent;
 }

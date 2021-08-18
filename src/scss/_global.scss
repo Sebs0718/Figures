@@ -38,3 +38,32 @@ a{
         transition: 480ms;
     }
 }
+
+select{
+    width: 20vw;
+    height: 30px;
+    border: transparent;
+    border-bottom: solid 1px grey;
+    margin: 10px;
+
+    &:focus{
+        outline: none;
+    }
+
+}
+
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+link{
+    text-decoration: none;
+}
+
+.form-group{
+    margin: 25px;
+}
+
+

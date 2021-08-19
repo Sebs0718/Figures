@@ -6,6 +6,8 @@
     align-items: center;
     transition:170ms;
 
+    box-shadow:  1px 5px 20px grey;
+
     &.active{
         margin-left: 20rem;
         transition: 480ms;

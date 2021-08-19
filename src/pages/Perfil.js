@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Menu from '../components/Menu';
 import { useSelector } from 'react-redux';
+import ball from '../assets/img/ball.svg';
 
 function Perfil(){
 
@@ -42,6 +43,7 @@ function Perfil(){
                     <div className="form-group">
                         <h3>Nombre</h3>
                         <h2>{user.names}</h2>
+                        <img src={ball} alt="" className="ball"/>
                     </div>
                     <div className="form-group">
                         <h3>Apellidos</h3>

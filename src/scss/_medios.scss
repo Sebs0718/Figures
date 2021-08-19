@@ -147,3 +147,11 @@
     }
     
 }
+
+@media (max-width: 359px) {
+    img{  
+        &.ball{
+            display: none;
+        }
+    }
+}

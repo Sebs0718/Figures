@@ -47,11 +47,7 @@ function NewFigure(props){
 
     const update = async ()=>{
         try {
-            console.log(localStorage.getItem('token'))
-            console.log(geometry)
             const obj = { "idFigureGroup": props.idGroup, "figureName": name, "positions": geometry }
-            console.log(obj)
-            console.log(props.id);
             await axios.put(`https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure/${props.id}`,obj,{
                 headers: {
                     Token: localStorage.getItem('token')

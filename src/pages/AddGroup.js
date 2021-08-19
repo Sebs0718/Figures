@@ -64,8 +64,6 @@ function AddGroup(){
                 "closeAt": close,
                 "selectFigure": chek
             }
-            console.log(localStorage.getItem('token'))
-            console.log(obj)
             await axios.post('https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/groupfigure',obj,{
                 headers:{
                     Token: localStorage.getItem('token')
@@ -78,8 +76,24 @@ function AddGroup(){
         }
     }
 
-    const update = ()=>{
-        
+    const update = async ()=>{
+        try {
+            const obj = {
+                "name": name, 
+                "opportunity": opportunity, 
+                "closeAt": close,
+                "selectFigure": chek
+            }
+            await axios.put(`https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/groupfigure/${id}`,obj,{
+                headers: {
+                    Token: localStorage.getItem('token')
+                }
+            });
+            history.push('/Figures');
+        } catch (error) {
+            alert('Error al actualizar');
+            console.error(error)
+        }
     }
 
     return(

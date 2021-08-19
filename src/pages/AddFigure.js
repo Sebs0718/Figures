@@ -60,7 +60,7 @@ function AddFigure(){
     return(
         <>
             <Menu />
-            <div className={sidebar ? "navbar-container active" : "navbar-container"}>
+            <div className={sidebar ? "navbar-container active sidebar-active" : "navbar-container"}>
                 <div className="row-target">
                     <button className="btn-add"><Link to="/Figures"><AiIcons.AiOutlineArrowLeft /></Link></button>
                     <select onChange={changeId} value={idGroup}>

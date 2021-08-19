@@ -79,14 +79,14 @@
 
     border-radius: 5px;
     width: 40px;
-    border-color:rgb(224, 222, 222);
+    border-color:rgb(162, 172, 255);
     color: blue;
     height: 40px;
     margin-left: 10px;
     font-size: 20px;
 
     &:hover{
-        border-color:rgba(39, 60, 241, 0.315);
+        border-color:rgb(39, 59, 241);
     }
 
     &.save{

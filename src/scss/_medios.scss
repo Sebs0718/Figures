@@ -3,6 +3,10 @@
 @media(max-width: 991px){
     .figure-container{
         grid-template-columns: repeat(2, 1fr);
+
+        &.active{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .card{
@@ -19,6 +23,9 @@
         width: 70vw;
     }
 
+    .btn-add{
+        width: 15vw;
+    }
 
 }
 
@@ -50,6 +57,17 @@
     .btn{
         width: 45%;
         height: 8vw;
+    }
+
+    .navbar-container{
+
+        &.active{
+            margin-left: 15rem;
+        }
+    }
+
+    .btn-add{
+        width: 10vw;
     }
 
 }
@@ -89,13 +107,14 @@
         }
 
         &.xl{
-            width: 85vw;
+            width: 80vw;
             margin-left: 0;
         }
     }
 
     .card-new{
-        width: 80vw;
+        width: 85vw;
+        height: 75vh;
     }
 
     .row-target{
@@ -106,5 +125,25 @@
             width: 110vw;
             font-size: 60px;
         }
+
     }
+
+    .modalidades-container{
+        width: 90vw;
+    }
+
+    .sidebar-active{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+
+    select{
+        width: 33vw;
+        height: 30px;
+ 
+    
+    }
+    
 }

@@ -12,7 +12,7 @@ function Dashboard (){
     return(
         <>
             <Menu />
-            <div className={sidebar ? "navbar-container active" : "navbar-container"}>
+            <div className={sidebar ? "navbar-container active sidebar-active" : "navbar-container"}>
                 <div className="row-target">
                     <div className="card md">
                         <Link to="/Figures">

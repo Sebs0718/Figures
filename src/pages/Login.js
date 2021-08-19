@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
+import logo from '../assets/img/logo.png';
 
 
 //import '../scss/login.scss';
@@ -20,7 +21,8 @@ function Login() {
         setPasswordValue(e.target.value);
     }
 
-    const login = async () =>{
+    const login = async (e) =>{
+        e.preventDefault();
         try {
             const obj = {username: usernameValue, password: passwordValue};
             const { data } = await axios.post("https://java.bocetos.co/userred-0.0.1-SNAPSHOT/auth", obj);
@@ -37,11 +39,13 @@ function Login() {
         <div className="backGround">
             <div className="container">
                 <div className="target">
-                    <h2> Figures </h2>
+                    <img src={logo} alt="" />
                     <div className="row">
-                        <input type="text" placeholder="Username" className="input" onChange={getUser} value={usernameValue} />
-                        <input type="password" placeholder="Password" className="input" onChange={getPassword} value={passwordValue} />
-                        <button className=" btn btn-login submit" onClick={login}>Login</button>
+                        <form onSubmit={login}>
+                            <input type="text" placeholder="Username" className="input" onChange={getUser} value={usernameValue} />
+                            <input type="password" placeholder="Password" className="input" onChange={getPassword} value={passwordValue} />
+                            <button type="submit" className=" btn btn-login submit">Login</button>
+                        </form>
                     </div>
                 </div>
             </div>

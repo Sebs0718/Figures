@@ -79,7 +79,7 @@ function Figures(){
     return(
         <>
             <Menu />
-            <div className={sidebar ? "navbar-container active" : "navbar-container"}>
+            <div className={sidebar ? "navbar-container active sidebar-active" : "navbar-container"}>
                 <div className="paginate">
                     <a className={pags.pag1 ? "pag selected" : "pag"} onClick={changePag} value="1">Figuras</a>
                     <a className={pags.pag2 ? "pag selected" : "pag"} onClick={changePag} value="2">Grupo de Modalidades</a>
@@ -114,7 +114,7 @@ function Figures(){
                                             <td>{item.opportunity}</td>
                                             <td>{item.closeAt}</td>
                                             <td>
-                                                <button className='btn btn-add'><AiIcons.AiFillEdit /></button>
+                                                <button className='btn btn-add'><Link to={`/EditGroup/${item.id}`}><AiIcons.AiFillEdit /></Link> </button>
                                                 <button className='btn btn-add'><AiIcons.AiFillDelete /></button>
                                             </td>
                                         </tr>

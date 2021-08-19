@@ -13,7 +13,7 @@ function Figure(props){
                 <div className="figure-title">
                     <h6>{props.name}</h6>
                     <a className="figure-title delete" onClick={()=>deleteFigure(props.id)}><AiIcons.AiOutlineClose /></a>
-                    <a className="figure-title delete"><Link to={`/EditGroup/${props.id}`}><AiIcons.AiFillEdit /></Link></a>
+                    <a className="figure-title delete"><Link to={`/EditFigure/${props.id}`}><AiIcons.AiFillEdit /></Link></a>
                 </div>
                 <div className="figure-content">
                     {props.positions.map((item, index)=>{

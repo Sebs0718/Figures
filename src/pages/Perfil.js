@@ -37,7 +37,7 @@ function Perfil(){
     return(
         <>
             <Menu />
-            <div className={sidebar ? "navbar-container active" : "navbar-container"}>
+            <div className={sidebar ? "navbar-container active sidebar-active" : "navbar-container"}>
                 <div className="card xl">
                     <div className="form-group">
                         <h3>Nombre</h3>

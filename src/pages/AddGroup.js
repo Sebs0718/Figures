@@ -71,7 +71,7 @@ function AddGroup(){
             });
             history.push('/Figures');
         } catch (error) {
-            alert('Error al guardar');
+            alert('Save Failed');
             console.error(error)
         }
     }
@@ -91,7 +91,7 @@ function AddGroup(){
             });
             history.push('/Figures');
         } catch (error) {
-            alert('Error al actualizar');
+            alert('Update Failed');
             console.error(error)
         }
     }
@@ -103,9 +103,9 @@ function AddGroup(){
                 <div className="row-target">
                     <button className="btn-add"><Link to="/Figures"><AiIcons.AiOutlineArrowLeft /></Link></button>
                     <div className="row-target sm">
-                        <input type="text" className="input label" placeholder="Nombre de Modalidad" value={name} onChange={getName}/>
-                        <input type="number" className="input label" placeholder="oportunidad" value={opportunity} onChange={getOpportunity}/>
-                        <input type="number" className="input label" placeholder="Cerrar al Lanzar" value={close} onChange={getClose}/>
+                        <input type="text" className="input label" placeholder="Modality Name" value={name} onChange={getName}/>
+                        <input type="number" className="input label" placeholder="Opportunity" value={opportunity} onChange={getOpportunity}/>
+                        <input type="number" className="input label" placeholder="Close on Launch" value={close} onChange={getClose}/>
                         <FormControlLabel
                             control={
                             <Checkbox
@@ -115,7 +115,7 @@ function AddGroup(){
                                 color="primary"
                             />
                             }
-                            label="Seleccione figura ?"
+                            label="Picks Figure?"
                         />
                         {name !== "" && opportunity !== "" && close !== "" ? <button onClick={id ? update :save} className="btn-add save"><AiIcons.AiOutlineSave /></button> : <button className="btn-add save disable"></button>}
                     </div>

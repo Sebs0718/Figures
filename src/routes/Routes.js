@@ -27,7 +27,7 @@ function Routes() {
                 <Route exact path='/AddGroup' render={()=>{
                     return !localStorage.token ? <Redirect to='/' /> : <AddGroup />
                 }} />
-                <Route exact path='/Perfil' render={()=>{
+                <Route exact path='/Profile' render={()=>{
                     return !localStorage.token ? <Redirect to='/' /> : <Perfil />
                 }} />
                 <Route exact path='/EditFigure/:id' render={()=>{

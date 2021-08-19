@@ -26,7 +26,7 @@ function Dashboard (){
                         <Link to="/Perfil">
                             <button className="btn-change">
                                 <FaIcons.FaUserAlt/>
-                                <h1>Perfil</h1>
+                                <h1>Profile</h1>
                             </button>
                         </Link>
                     </div>

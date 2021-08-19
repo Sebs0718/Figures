@@ -81,8 +81,8 @@ function Figures(){
             <Menu />
             <div className={sidebar ? "navbar-container active sidebar-active" : "navbar-container"}>
                 <div className="paginate">
-                    <a className={pags.pag1 ? "pag selected" : "pag"} onClick={changePag} value="1">Figuras</a>
-                    <a className={pags.pag2 ? "pag selected" : "pag"} onClick={changePag} value="2">Grupo de Modalidades</a>
+                    <a className={pags.pag1 ? "pag selected" : "pag"} onClick={changePag} value="1">Figures</a>
+                    <a className={pags.pag2 ? "pag selected" : "pag"} onClick={changePag} value="2">Modality Group</a>
                 </div>
                 <div className={pags.pag1 ? "row-target" : "row-target disable"}>
                     <button className="btn btn-add"><Link to="/AddFigures"><IoIcons.IoMdAdd /></Link></button>
@@ -100,10 +100,10 @@ function Figures(){
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Nombre de la Modalidad</th>
-                                    <th>Oportunidad</th>
-                                    <th>Cerrar al lanzar</th>
-                                    <th>Acciones</th>
+                                    <th>Modality Name</th>
+                                    <th>Opportunity</th>
+                                    <th>Close on Launch</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>

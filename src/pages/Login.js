@@ -30,7 +30,7 @@ function Login() {
             localStorage.setItem('uId', data.uId)
             history.push('/Dashboard');
         } catch (error) {
-            alert('Incorrect User or Password')
+            alert('Incorrect Username or Password')
             console.error(error)
         }
     }

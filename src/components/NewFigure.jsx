@@ -40,7 +40,7 @@ function NewFigure(props){
             });
             history.push('/Figures');
         } catch (error) {
-            alert('Error al guardar');
+            alert('Save Failed');
             console.error(error)
         }
     }
@@ -55,7 +55,7 @@ function NewFigure(props){
             });
             history.push('/Figures');
         } catch (error) {
-            alert('Error al actualizar');
+            alert('Update Failed');
             console.error(error)
         }
     }

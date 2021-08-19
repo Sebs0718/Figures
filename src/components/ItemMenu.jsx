@@ -10,8 +10,8 @@ export const ItemMenu = [
         cName: 'nav-text'
     },
     {
-        title: 'Perfil',
-        path: '/Perfil',
+        title: 'Profile',
+        path: '/Profile',
         icon: <FaIcons.FaUserCircle />,
         cName: 'nav-text'
     },

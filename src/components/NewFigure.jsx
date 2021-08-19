@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import * as AiIcons from 'react-icons/ai';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
 function NewFigure(props){
 
-
     const nombre = props.name ? props.name : '';
     const array = props.positions ? props.positions : [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
 
+    const history = useHistory();
     const [geometry, setGeometry] = useState(array);
-
     const [name, setName] = useState(nombre);
 
     const getName = (e)=>{
@@ -32,13 +32,13 @@ function NewFigure(props){
 
     const save = async ()=>{
         try {
-            const {data} = await axios.post('https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure',{
-                headers:{
+            const obj = {"figureName": name, "idFigureGroup": props.idGroup, "positions": geometry };
+            await axios.post('https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure',obj,{
+                headers: {
                     Token: localStorage.getItem('token')
-                },
-                body: {"id_grupofigure": props.idGroup, "figurename": name, "positions": geometry }
+                }
             });
-
+            history.push('/Figures');
         } catch (error) {
             alert('Error al guardar');
             console.error(error)
@@ -47,14 +47,17 @@ function NewFigure(props){
 
     const update = async ()=>{
         try {
-            const obj = {"idFigureGroup": props.idGroup, "figureName": name, "positions": geometry }
-            const {data} = await axios.put(`https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure/${props.id}`,{
-                headers:{
+            console.log(localStorage.getItem('token'))
+            console.log(geometry)
+            const obj = { "idFigureGroup": props.idGroup, "figureName": name, "positions": geometry }
+            console.log(obj)
+            console.log(props.id);
+            await axios.put(`https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure/${props.id}`,obj,{
+                headers: {
                     Token: localStorage.getItem('token')
-                },
-                body: obj
+                }
             });
-
+            history.push('/Figures');
         } catch (error) {
             alert('Error al actualizar');
             console.error(error)
@@ -65,14 +68,14 @@ function NewFigure(props){
         <div className="card-new">
             <div className="figure-item">
                 <div className="figure-title">
-                    <input type="text" placeholder="Username" className="input label" onChange={getName} value={name}  />
-                    {name != "" ? <button onClick={props.name ? update : save} className="btn-add save"><AiIcons.AiOutlineSave /></button> : <button className="btn-add save disable"></button>}
+                    <input type="text" placeholder="Name" className="input label" onChange={getName} value={name}  />
+                    {name !== "" ? <button onClick={props.name ? update : save} className="btn-add save"><AiIcons.AiOutlineSave /></button> : <button className="btn-add save disable"></button>}
                 </div>
                 <div className="figure-content">
                     {geometry.map((item,index) =>{
                         return(
                             <div key={index} className={item ? "quadrate new active" : "quadrate new"}>
-                                <button className="btn-change" value={index} onClick={changeState}></button> 
+                                {props.id ? <></> :<button className="btn-change" value={index} onClick={changeState}></button>} 
                             </div>
                         );
                     })}

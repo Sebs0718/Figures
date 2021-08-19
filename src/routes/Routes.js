@@ -30,6 +30,9 @@ function Routes() {
                 <Route exact path='/Perfil' render={()=>{
                     return !localStorage.token ? <Redirect to='/' /> : <Perfil />
                 }} />
+                <Route exact path='/EditGroup/:id' render={()=>{
+                    return !localStorage.token ? <Redirect to='/' /> : <AddFigure />
+                }} />
             </Switch>
         </BrowserRouter>
     );

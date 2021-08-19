@@ -38,7 +38,7 @@ function AddGroup(){
                 "closeAt": close,
                 "selectFigure": chek
             }
-            const {data} = await axios.post('https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure',{
+            await axios.post('https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure',{
                 headers:{
                     Token: localStorage.getItem('token')
                 },
@@ -71,7 +71,7 @@ function AddGroup(){
                             }
                             label="Seleccione figura ?"
                         />
-                        {name != "" && opportunity != "" && close !="" ? <button onClick={save} className="btn-add save"><AiIcons.AiOutlineSave /></button> : <button className="btn-add save disable"></button>}
+                        {name !== "" && opportunity !== "" && close !== "" ? <button onClick={save} className="btn-add save"><AiIcons.AiOutlineSave /></button> : <button className="btn-add save disable"></button>}
                     </div>
                 </div>
             </div>

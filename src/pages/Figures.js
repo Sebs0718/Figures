@@ -56,7 +56,7 @@ function Figures(){
 
     const changePag = (e)=>{
         const pag = e.target.attributes.value.value;
-        if(pag == 1){
+        if(pag === "1"){
             setPags({
                 pag1: true,
                 pag2: false
@@ -89,7 +89,7 @@ function Figures(){
                     <div className={sidebar ? "figure-container active" : "figure-container"}>
                         {geometry.map((item, index)=>{
                             return(
-                                <Figure idGroup={item.groupFigureId.id} id={item.id} name={item.name} positions={item.positionsWinner} />
+                                <Figure key={index} idGroup={item.groupFigureId.id} id={item.id} name={item.name} positions={item.positionsWinner} />
                             );
                         })}
                     </div>
